@@ -10,3 +10,11 @@ def save(owner):
     owner.id = results[0]['id']
     return owner
 
+def select_all():
+    owners = []
+    sql = "SELECT * FROM owners"
+    results = run_sql(sql)
+    for row in results:
+        owner = Owner(row['name'], row['phone_number'], row['registration'], row['id'])
+        owners.append(owner)
+    return owners
