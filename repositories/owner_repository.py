@@ -18,3 +18,17 @@ def select_all():
         owner = Owner(row['name'], row['phone_number'], row['registration'], row['id'])
         owners.append(owner)
     return owners
+
+def select(id):
+    owner = None
+    sql = "SELECT * FROM owners WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    if result is not None:
+        owner = Owner(result['name'], result['phone_number'], result['registration'], result['id'])
+    return owner
+
+def delete_all():
+    sql = "DELETE  FROM owners"
+    run_sql(sql)
+    

@@ -9,9 +9,9 @@ import repositories.pet_repository as pet_repository
 
 
 
-# vet_repository.delete_all()
-# owner_repository.delete_all()
-# pet_repository.delete_all()
+vet_repository.delete_all()
+owner_repository.delete_all()
+pet_repository.delete_all()
 
 
 # Vets
@@ -58,20 +58,20 @@ pet_repository.save(pet_4)
 
 
 ############################################
-# all_vets = vet_repository.select_all()
-# all_owners = owner_repository.select_all()
-# all_pets = pet_repository.select_all()
+all_vets = vet_repository.select_all()
+all_owners = owner_repository.select_all()
+all_pets = pet_repository.select_all()
 
 
-# # Print it out to see in terminal
-# for vet in all_vets:
-#     print(vet.__dict__)
+# Print it out to see in terminal
+for vet in all_vets:
+    print(vet.__dict__)
 
-# for owner in all_owners:
-#     print(owner.__dict__)
+for owner in all_owners:
+    print(owner.__dict__)
 
-# for pet in all_pets:
-#     print(pet.__dict__)
+for pet in all_pets:
+    print(pet.__dict__)
 ############################################
 
 pdb.set_trace()
