@@ -31,4 +31,20 @@ def select(id):
 def delete_all():
     sql = "DELETE  FROM owners"
     run_sql(sql)
-    
+
+####################################
+def update(owner):
+    sql = "UPDATE owners SET (name, phone_number, registration) = (%s, %s, %s) WHERE id = %s"
+    values = [owner.name, owner.phone_number, owner.registration]
+    run_sql(sql, values)
+
+# Returns all owner's pets treated by specific vet
+def owner_for_pet(owner):
+    owner_for_pets = []
+    sql = "SELECT owners.* FROM owners INNER JOIN pets ON pets.owner_id = owners.id WHERE vet_id = %s"
+    values = [owner.id]
+    results = run_sql(sql, values)
+    for row in results:
+        owner_for_pet = Owner(row['name'], row['phone_number'], row['registration'], row['id'])
+        owner_for_pets.append(owner_for_pet)
+    return owner_for_pets

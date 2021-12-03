@@ -2,7 +2,6 @@ import pdb
 from models.vet import Vet
 from models.owner import Owner
 from models.pet import Pet
-
 import repositories.vet_repository as vet_repository
 import repositories.owner_repository as owner_repository
 import repositories.pet_repository as pet_repository
@@ -45,15 +44,20 @@ owner_repository.save(owner_4)
 # Pets
 pet_1 = Pet("Layla", "09-09-2020", "Dog", owner_1, vet_3, "Ear drops needed to treat ear infection")
 pet_repository.save(pet_1)
-
-pet_2 = Pet("Mylo", "26-04-2016", "Cat", owner_2, vet_1, "Weekly spray from fleas")
+pet_2 = Pet("Mylo", "26-04-2016", "Cat", owner_1, vet_3, "Weekly spray from fleas")
 pet_repository.save(pet_2)
 
-pet_3 = Pet("Snoopy", "02-12-2018", "Rabbit", owner_3, vet_2, "Operation on teeth")
+pet_3 = Pet("Snoopy", "02-12-2018", "Rabbit", owner_2, vet_2, "Operation on teeth")
 pet_repository.save(pet_3)
 
-pet_4 = Pet("Bella", "24-10-2014", "dog", owner_4, vet_4, "Eye drops to treat red eye")
+pet_4 = Pet("Bella", "24-10-2014", "Cat", owner_3, vet_4, "Eye drops to treat red eye")
 pet_repository.save(pet_4)
+pet_5 = Pet("Maya", "18-06-2015", "dog", owner_3, vet_4, "Yearly flue vaccination")
+pet_repository.save(pet_5)
+
+pet_6 = Pet("Max", "17-09-2021", "Dog", owner_4, vet_1, "Vaccine from rabies")
+pet_repository.save(pet_6)
+
 
 
 
