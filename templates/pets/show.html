@@ -11,10 +11,17 @@
     <h3>{{ pet.vet.name }}</h3>
     <h3>{{ pet.treatment_notes }}</h3>
 
-    <form action="{{ pet.id }}/edit">
+    <form action="{{ pet.id }}/edit" method="post">
         <input type="submit" value="Update pet details">
+    </form>
+
+    <form action="{{ pet.id }}/delete" method="post">
+        <input type="submit" value="Delete pet">
     </form>
     
 </div>
 
 {% endblock content %}
+
+
+ 

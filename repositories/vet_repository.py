@@ -31,6 +31,11 @@ def delete_all():
     sql = "DELETE  FROM vets"
     run_sql(sql)
 
+def delete(id):
+    sql = "DELETE  FROM vets WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
 ####################################
 def update(vet):
     sql = "UPDATE vets SET (name, experience) = (%s, %s) WHERE id = %s"
