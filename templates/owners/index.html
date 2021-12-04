@@ -2,28 +2,35 @@
 
 {% block content %}
     
-    <h1>Owners of pets</h1>
-    <table>
+<h1>Owners of pets</h1>
+<hr>
+<h3>
+    <a class="links" href="/owners/new">Add new owner</a>
+</h3>
+
+<table>
+    <tr>
+        <th>Name:</th>
+        <th></th>
+        <th>Phone number:</th>
+        <th></th>
+        <th>Registration:</th>
+        <th></th>
+        <th>owner's pets:</th>
+    </tr>
+    <hr>
+    {% for owner in owners %}
         <tr>
-            <th>Name:</th>
-            <th></th>
-            <th>Phone number:</th>
-            <th></th>
-            <th>Registration:</th>
-            <th></th>
-            <th>owner's pets:</th>
+            <td><a href="/owners/{{ owner.id }}"> {{ owner.name }} </a></td>
+            <td>|</td>
+            <td>{{ owner.phone_number }}</td>
+            <td>|</td>
+            <td>{{ owner.registration }}</td>
+            <td>|</td>
+            <td>GET PETS - TODO</td>
         </tr>
-        {% for owner in owners %}
-            <tr>
-                <td><a href="/owners/{{ owner.id }}"> {{ owner.name }} </a></td>
-                <td>|</td>
-                <td>{{ owner.phone_number }}</td>
-                <td>|</td>
-                <td>{{ owner.registration }}</td>
-                <td>|</td>
-                <td>GET PETS - TODO</td>
-            </tr>
-        {% endfor %}
-    </table>
+    {% endfor %}
+</table>
+<hr>
 
 {% endblock content %}

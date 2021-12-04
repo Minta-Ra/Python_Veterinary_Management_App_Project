@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add new owner</h1>
+
+<form action="/owners" method="post">
+
+    <!-- Insert vet's details -->
+    <label for="name">Name:</label>
+    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write owner's full name" id="name">
+
+    <label for="phone_number">Phone number:</label>
+    <input autocomplete="off" type="text" name="phone_number" id="phone_number">
+
+    <label for="registration">Registration</label>
+    <input type="checkbox" id="registration" name="registration">
+
+
+    <!-- Display all owner's pets -->
+
+
+    <!-- Submit button -->
+    <input type="submit" value="Add new owner">
+
+</form>
+
+{% endblock content %}

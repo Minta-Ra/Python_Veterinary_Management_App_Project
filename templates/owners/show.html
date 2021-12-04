@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+
+    <h3>Owner's name: {{ owner.name }}</h3>
+    <h3>Phone number: {{ owner.phone_number }}</h3>
+    <h3>Registration: {{ owner.registration }}</h3>
+
+    <!-- For loop to get owner's pets -->
+
+    <form action="{{ owner.id }}/edit">
+        <input type="submit" value="Update owner details">
+    </form>
+
+    <form action="{{ owner.id }}/delete" method="post">
+        <input type="submit" value="Delete owner">
+    </form>
+    
+</div>
+
+{% endblock content %}

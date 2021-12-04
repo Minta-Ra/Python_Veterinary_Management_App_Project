@@ -3,8 +3,8 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.vet import Vet
 import repositories.vet_repository as vet_repository
-import repositories.owner_repository as owner_repository
-import repositories.pet_repository as pet_repository
+# import repositories.owner_repository as owner_repository
+# import repositories.pet_repository as pet_repository
 
 
 vets_blueprint = Blueprint("veterinarians", __name__)
@@ -32,7 +32,6 @@ def vets():
 @vets_blueprint.route("/veterinarians/new", methods=["GET"])
 def new_vet():
     return render_template("vets/new.html")
-
 
 # CREATE
 # POST '/vets'
