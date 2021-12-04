@@ -17,15 +17,35 @@ def pets():
     pets = pet_repository.select_all()
     return render_template("pets/index.html", pets=pets)
 
-
 # NEW
 # GET '/pets/new'
+@pets_blueprint.route("/pets/new", methods=["GET"])
+def new_pet():
+    owners = owner_repository.select_all()
+    vets = vet_repository.select_all()
+    return render_template("pets/new.html", owners=owners, vets=vets)
 
-# CREATE
+# CREATE - ADD
 # POST '/pets'
+@pets_blueprint.route("/pets", methods=["POST"])
+def add_new_pet():
+    name = request.form["name"]
+    dob = request.form["dob"]
+    pet_type = request.form["pet_type"]
+    owner_id = request.form["owner_id"]
+    vet_id = request.form["vet_id"]
+    treatment_notes = request.form["treatment_notes"]
+    owner = owner_repository.select(owner_id)
+    vet = vet_repository.select(vet_id)
+    pet = Pet(name, dob, pet_type, owner, vet, treatment_notes)
+    pet_repository.save(pet)
+    return redirect("/pets")
+
 
 # SHOW
 # GET '/pets/<id>'
+
+
 
 # EDIT
 # GET '/pets/<id>/edit'
