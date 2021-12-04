@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Edit veterinarian details</h1>
+
+<form action="/veterinarians/{{ vet.id }}" method="post">
+
+    <!-- Insert vet's details -->
+    <label for="name">Name:</label>
+    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name" value="{{ vet.name }}">
+
+    <label for="experience">Years of experience:</label>
+    <input autocomplete="off" type="number" name="experience" id="experience" value="{{ vet.experience }}">
+
+
+    <!-- Display all pets treated by specific vet -->
+
+
+    <!-- Submit button -->
+    <input type="submit" value="Confirm update details">
+
+</form>
+
+{% endblock content %}

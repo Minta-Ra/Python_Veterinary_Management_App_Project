@@ -1,15 +1,16 @@
-<!-- {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-<h1>{{ vet.name }}</h1>
+<div>
+    <h3>Name: {{ vet.name }}</h3>
+    <h3>Years of experience: {{ vet.experience }}</h3>
 
-<p>Years of experience: {{ vet.experience }}</p>
+    <form action="{{ vet.id }}/edit">
+        <input type="submit" value="Update veterinarian details">
+    </form>
 
-<h3>Visited by: </h3>
-<ul>
-    {% for owner in owners %}
-        <li>{{ owner.name }}</li>
-    {% endfor %}
-</ul>
-    
-{% endblock content %} -->
+    <form action="{{ vet.id }}/delete" method="post">
+        <input type="submit" value="Delete veterinarian">
+    </form>
+</div>
+{% endblock content %}

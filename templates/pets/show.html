@@ -4,12 +4,12 @@
 
 <div>
 
-    <h3>{{ pet.name }}</h3>
-    <h3>{{ pet.dob }}</h3>
-    <h3>{{ pet.pet_type }}</h3>
-    <h3>{{ pet.owner.name }}</h3>
-    <h3>{{ pet.vet.name }}</h3>
-    <h3>{{ pet.treatment_notes }}</h3>
+    <h3>Pet's name: {{ pet.name }}</h3>
+    <h3>Date of birth: {{ pet.dob }}</h3>
+    <h3>Pet type: {{ pet.pet_type }}</h3>
+    <h3>Owner: {{ pet.owner.name }}</h3>
+    <h3>Assigned veterinarian: {{ pet.vet.name }}</h3>
+    <h3>Treatment notes: {{ pet.treatment_notes }}</h3>
 
     <form action="{{ pet.id }}/edit">
         <input type="submit" value="Update pet details">
