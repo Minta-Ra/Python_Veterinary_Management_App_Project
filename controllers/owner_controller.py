@@ -11,3 +11,26 @@ owners_blueprint = Blueprint("owners", __name__)
 def owners():
     owners = owner_repository.select_all()
     return render_template("owners/index.html", owners=owners)
+
+# RESTful CRUD Routes
+
+# INDEX
+# GET '/tasks'
+
+# NEW
+# GET '/tasks/new'
+
+# CREATE
+# POST '/tasks'
+
+# SHOW
+# GET '/tasks/<id>'
+
+# EDIT
+# GET '/tasks/<id>/edit'
+
+# UPDATE
+# PUT '/tasks/<id>'
+
+# DELETE
+# DELETE '/tasks/<id>'

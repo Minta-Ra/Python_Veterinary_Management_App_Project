@@ -17,3 +17,27 @@ def vets():
 #     vet = vet_repository.select(id)
 #     owners = owner_repository.owners(vet)
 #     return render_template("vets/show.html", vet=vet, owners=owners)
+
+
+# RESTful CRUD Routes
+
+# INDEX
+# GET '/tasks'
+
+# NEW
+# GET '/tasks/new'
+
+# CREATE
+# POST '/tasks'
+
+# SHOW
+# GET '/tasks/<id>'
+
+# EDIT
+# GET '/tasks/<id>/edit'
+
+# UPDATE
+# PUT '/tasks/<id>'
+
+# DELETE
+# DELETE '/tasks/<id>'

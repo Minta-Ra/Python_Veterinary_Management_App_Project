@@ -20,10 +20,11 @@
 .links {
     color: white;
     text-decoration: none;
-    padding: 30px 50px 0px 15px;
+    padding: 21px 40px 0px 0px;
 }
 
 .nav_image {
+    padding: 10px;
     height: 70px;
     width: auto;
 }
@@ -38,13 +39,47 @@
 
 
 body {
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0px;
     background-color: grey;
-    background-image: url("/static/images/home-background.png");
+    background-image: url("/static/images/background.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
+
+#home {
+    padding: 20px;
+    text-align: center;
+    color: rgb(0, 4, 53);
+    font-size: 25px;
+}
+#home-image {
+    width: 50%;
+    padding: 20px;
+}
+
+
+/* -PAGES--------------------------------------------------- */
+.content-page {
+    color: white;
+    text-decoration: none;
+    margin: 30px 70px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.table {
+    padding: 20px 0px;
+    /* background-color: lightgrey; */
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.table-links {
+    color: white;
+    text-decoration: none;
+}
 
 /* .all-events {
     display: flex;

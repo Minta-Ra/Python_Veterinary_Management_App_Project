@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Imported google font -->
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Caveat&family=Fredoka+One&family=Indie+Flower&family=Josefin+Sans:wght@100;700&family=Reem+Kufi:wght@400;700&family=Work+Sans:wght@100;700&display=swap" rel="stylesheet">
 
         <!-- Link CSS to HTML within the head from folder "static" -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -20,27 +22,27 @@
             <ul class="lists">
                 <li>
                     <img class="nav_image" src="/static/images/nav/home.png" alt="H">
-                    <a class="links" href="/">Home</a>
+                    <a class="links" href="/"><h3>Home</h3></a>
                 </li>
                 <li>
                     <img class="nav_image" src="/static/images/nav/pet.png" alt="H">
-                    <a class="links" href="/pets">Pets</a>
+                    <a class="links" href="/pets"><h3>Pets</h3></a>
                 </li>
                 <li>
                     <img class="nav_image" src="/static/images/nav/vet.png" alt="H">
-                    <a class="links" href="/veterinarians">Veterinarians</a>
+                    <a class="links" href="/veterinarians"><h3>Veterinarians</h3></a>
                 </li>
                 <li>
                     <img class="nav_image" src="/static/images/nav/user.png" alt="H">
-                    <a class="links" href="/owners">Pet Owners</a>
+                    <a class="links" href="/owners"><h3>Pet Owners</h3></a>
                 </li>
                 <li>
                     <img class="nav_image" src="/static/images/nav/appointments.png" alt="H">
-                    <a class="links" href="/appointments">Appointments</a>
+                    <a class="links" href="/appointments"><h3>Appointments</h3></a>
                 </li>
                 <li>
                     <img class="nav_image" src="/static/images/nav/register.png" alt="H">
-                    <a class="links" href="/registration">Registration</a>
+                    <a class="links" href="/registration"><h3>Registration</h3></a>
                 </li>
             </ul>
         </nav>
