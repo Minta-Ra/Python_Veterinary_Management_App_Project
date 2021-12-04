@@ -1,0 +1,60 @@
+/* -NAV------------------------------------------------------ */
+
+.lists {
+  background-image: url("/static/images/nav/vet-nav2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* list-style-type: none; */
+  display: flex;
+
+  /* background-image: linear-gradient(to right, #008282, #6E006E); */
+  padding: 40px;
+  margin: 0px;
+  color: white;
+}
+
+.lists > li {
+    display: flex;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    padding: 30px 50px 0px 15px;
+}
+
+.nav_image {
+    height: 70px;
+    width: auto;
+}
+
+.nav-separation {
+    border: 5px solid #0f0f0f;
+    margin: 0px;
+}
+
+
+/* -BODY----------------------------------------------------- */
+
+
+body {
+    margin: 0px;
+    background-color: grey;
+    background-image: url("/static/images/home-background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+/* .all-events {
+    display: flex;
+}
+
+.event {
+    flex-flow: row wrap;
+    align-items: left;
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+} */

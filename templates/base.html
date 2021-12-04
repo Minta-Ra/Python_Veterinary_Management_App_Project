@@ -4,33 +4,47 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Imported google font -->
+
+
+        <!-- Link CSS to HTML within the head from folder "static" -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
         <title>Veterinary Management App</title>
     </head>
     <body>
 
         <nav>
-            <ul>
+            <ul class="lists">
                 <li>
-                    <a href="/">Home</a>
+                    <img class="nav_image" src="/static/images/nav/home.png" alt="H">
+                    <a class="links" href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/pets">Pets</a>
+                    <img class="nav_image" src="/static/images/nav/pet.png" alt="H">
+                    <a class="links" href="/pets">Pets</a>
                 </li>
                 <li>
-                    <a href="/veterinarians">Veterinarians</a>
+                    <img class="nav_image" src="/static/images/nav/vet.png" alt="H">
+                    <a class="links" href="/veterinarians">Veterinarians</a>
                 </li>
                 <li>
-                    <a href="/owners">Pet Owners</a>
+                    <img class="nav_image" src="/static/images/nav/user.png" alt="H">
+                    <a class="links" href="/owners">Pet Owners</a>
                 </li>
                 <li>
-                    <a href="/appointments">Appointments</a>
+                    <img class="nav_image" src="/static/images/nav/appointments.png" alt="H">
+                    <a class="links" href="/appointments">Appointments</a>
                 </li>
                 <li>
-                    <a href="/registration">Registration</a>
+                    <img class="nav_image" src="/static/images/nav/register.png" alt="H">
+                    <a class="links" href="/registration">Registration</a>
                 </li>
             </ul>
         </nav>
-
+        <hr class="nav-separation">
         <section>
             {% block content %}
                 
