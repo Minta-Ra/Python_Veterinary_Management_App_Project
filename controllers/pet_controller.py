@@ -41,17 +41,38 @@ def add_new_pet():
     pet_repository.save(pet)
     return redirect("/pets")
 
-
 # SHOW
 # GET '/pets/<id>'
-
-
+@pets_blueprint.route("/pets/<id>")
+def show_pets(id):
+    pet = pet_repository.select(id)
+    return render_template("pets/show.html", pet=pet)
 
 # EDIT
 # GET '/pets/<id>/edit'
+@pets_blueprint.route("/pets/<id>/edit")
+def edit_pet(id):
+    pet = pet_repository.select(id)
+    owners = owner_repository.select_all()
+    vets = vet_repository.select_all()
+    return render_template("pets/edit.html", pet=pet, owners=owners, vets=vets)
 
 # UPDATE
 # PUT '/pets/<id>'
+@pets_blueprint.route("/pets/<id>", methods=["POST"])
+def update_pet_details(id):
+    name = request.form["name"]
+    dob = request.form["dob"]
+    pet_type = request.form["pet_type"]
+    owner_id = request.form["owner_id"]
+    vet_id = request.form["vet_id"]
+    treatment_notes = request.form["treatment_notes"]
+    owner = owner_repository.select(owner_id)
+    vet = vet_repository.select(vet_id)
+    pet = Pet(name, dob, pet_type, owner, vet, treatment_notes, id)
+    pet_repository.update(pet)
+    return redirect("/pets")
+
 
 # DELETE
 # DELETE '/pets/<id>'

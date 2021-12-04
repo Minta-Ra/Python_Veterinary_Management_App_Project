@@ -22,6 +22,21 @@ def select_all():
         pets.append(pet)
     return pets
 
+####################
+def select(id):
+    pet = None
+    sql = "SELECT * FROM pets WHERE id = %s"
+    # Get pet and owner
+    # sql = "SELECT pets.*, owners.* FROM pets INNER JOIN owners ON owners.id = pets.owner_id WHERE pets.id = %s"
+    values = [id]
+    result = run_sql(sql, values)[0]
+    owner = owner_repository.select(result['owner_id'])
+    vet = vet_repository.select(result['vet_id'])
+    if result is not None:
+        pet = Pet(result['name'], result['dob'], result['pet_type'], owner, vet, result['treatment_notes'], result['id'])
+    return pet
+
+
 def delete_all():
     sql = "DELETE  FROM pets"
     run_sql(sql)
@@ -31,8 +46,7 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-####################################
 def update(pet):
-    sql = "UPDATE pets SET (name, dob, pet_type, owner_id, vet_id, treatment_notes) VALUES (%s, %s, %s, %s, %s, %s) WHERE id = %s"
-    values = [pet.name, pet.dob, pet.pet_type, pet.owner.id, pet.vet.id, pet.treatment_notes]
+    sql = "UPDATE pets SET (name, dob, pet_type, owner_id, vet_id, treatment_notes) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [pet.name, pet.dob, pet.pet_type, pet.owner.id, pet.vet.id, pet.treatment_notes, pet.id]
     run_sql(sql, values)

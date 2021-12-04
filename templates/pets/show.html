@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+
+    <h3>{{ pet.name }}</h3>
+    <h3>{{ pet.dob }}</h3>
+    <h3>{{ pet.pet_type }}</h3>
+    <h3>{{ pet.owner.name }}</h3>
+    <h3>{{ pet.vet.name }}</h3>
+    <h3>{{ pet.treatment_notes }}</h3>
+
+    <form action="{{ pet.id }}/edit">
+        <input type="submit" value="Update pet details">
+    </form>
+    
+</div>
+
+{% endblock content %}

@@ -33,8 +33,8 @@ def delete_all():
 
 ####################################
 def update(vet):
-    sql = "UPDATE vets SET (name, experience) VALUES (%s, %s) WHERE id = %s"
-    values = [vet.name, vet.experience]
+    sql = "UPDATE vets SET (name, experience) = (%s, %s) WHERE id = %s"
+    values = [vet.name, vet.experience, vet.id]
     run_sql(sql, values)
 
 

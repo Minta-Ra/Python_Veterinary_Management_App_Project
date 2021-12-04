@@ -35,7 +35,7 @@ def delete_all():
 ####################################
 def update(owner):
     sql = "UPDATE owners SET (name, phone_number, registration) = (%s, %s, %s) WHERE id = %s"
-    values = [owner.name, owner.phone_number, owner.registration]
+    values = [owner.name, owner.phone_number, owner.registration, owner.id]
     run_sql(sql, values)
 
 # Returns all owner's pets treated by specific vet
