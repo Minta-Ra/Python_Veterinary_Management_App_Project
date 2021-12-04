@@ -37,6 +37,8 @@ def update(vet):
     values = [vet.name, vet.experience]
     run_sql(sql, values)
 
+
+# Show all pets treated by specific vet
 # Returns a vet who is treating specific owner's pets
 def vet_for_pet(owner):
     vet_for_pets = []

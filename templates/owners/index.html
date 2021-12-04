@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+    <h1>Owners of pets</h1>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th></th>
+            <th>Phone number:</th>
+            <th></th>
+            <th>Registration:</th>
+            <th></th>
+            <th>owner's pets:</th>
+        </tr>
+        {% for owner in owners %}
+            <tr>
+                <td><a href="/owners/{{ owner.id }}"> {{ owner.name }} </a></td>
+                <td>|</td>
+                <td>{{ owner.phone_number }}</td>
+                <td>|</td>
+                <td>{{ owner.registration }}</td>
+                <td>|</td>
+                <td>GET PETS - TODO</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock content %}

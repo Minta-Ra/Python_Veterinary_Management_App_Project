@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Veterinarians in this clinic</h1>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <th></th>
+            <th>Years of experience:</th>
+        </tr>
+        {% for vet in vets %}
+            <tr>
+                <td><a href="/veterinarians/{{ vet.id }}"> {{ vet.name }} </a></td>
+                <td>|</td>
+                <td>{{ vet.experience }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

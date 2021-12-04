@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Pets in this clinic</h1>
+
+    <p>
+        <a href="/pets/new">Add new pet</a>
+    </p>
+
+    <ul>
+        {% for pet in pets %}
+        <li>
+            <p>{{ pet.name }} - {{ pet.owner.name }} - {{ pet.vet.name }}</p>
+        </li>
+            
+        {% endfor %}
+    </ul>
+
+    
+{% endblock content %}
