@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Add new veterinarian</h1>
+
+<form action="/veterinarians" method="post">
+
+    <!-- Insert vet's details -->
+    <label for="name">Name:</label>
+    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name">
+
+    <label for="experience">Years of experience:</label>
+    <input autocomplete="off" type="number" name="experience" id="experience">
+
+
+    <!-- Display all pets treated by specific vet -->
+
+
+    <!-- Submit button -->
+    <input type="submit" value="Add new veterinarian">
+
+</form>
+
+{% endblock content %}

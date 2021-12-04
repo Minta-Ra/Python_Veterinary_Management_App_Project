@@ -15,22 +15,22 @@ def owners():
 # RESTful CRUD Routes
 
 # INDEX
-# GET '/tasks'
+# GET '/owners'
 
 # NEW
-# GET '/tasks/new'
+# GET '/owners/new'
 
 # CREATE
-# POST '/tasks'
+# POST '/owners'
 
 # SHOW
-# GET '/tasks/<id>'
+# GET '/owners/<id>'
 
 # EDIT
-# GET '/tasks/<id>/edit'
+# GET '/owners/<id>/edit'
 
 # UPDATE
-# PUT '/tasks/<id>'
+# PUT '/owners/<id>'
 
 # DELETE
-# DELETE '/tasks/<id>'
+# DELETE '/owners/<id>'

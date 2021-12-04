@@ -22,7 +22,6 @@ def select_all():
         pets.append(pet)
     return pets
 
-####################
 def select(id):
     pet = None
     sql = "SELECT * FROM pets WHERE id = %s"
@@ -35,7 +34,6 @@ def select(id):
     if result is not None:
         pet = Pet(result['name'], result['dob'], result['pet_type'], owner, vet, result['treatment_notes'], result['id'])
     return pet
-
 
 def delete_all():
     sql = "DELETE  FROM pets"
