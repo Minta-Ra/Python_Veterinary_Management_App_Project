@@ -23,7 +23,7 @@ CREATE TABLE pets (
     name VARCHAR(255),
     dob VARCHAR(255),
     pet_type VARCHAR(255),
-    owner_id INT REFERENCES owners(id) ON DELETE SET NULL, -- How to set of it is last pet that owner has?
-    vet_id INT REFERENCES vets(id) ON DELETE SET NULL,
+    owner_id INT REFERENCES owners(id) ON DELETE CASCADE,
+    vet_id INT REFERENCES vets(id) ON DELETE SET NULL,      -- Error handling needs to be implemented
     treatment_notes TEXT
 );

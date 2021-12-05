@@ -15,6 +15,10 @@ owners_blueprint = Blueprint("owners", __name__)
 @owners_blueprint.route("/owners")
 def owners():
     owners = owner_repository.select_all()
+    # Bring all pets of specific owner
+    for owner in owners:
+        owner_pets = owner_repository.bring_owner_pets(owner.id)
+        owner.my_pets = owner_pets
     return render_template("owners/index.html", owners=owners)
 
 # NEW

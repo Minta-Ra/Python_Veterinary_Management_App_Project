@@ -48,6 +48,7 @@ body {
 }
 
 #home {
+    /* text-shadow: 3px 2px 2px #0c0c0c; */
     padding: 20px;
     text-align: center;
     color: rgb(0, 4, 53);

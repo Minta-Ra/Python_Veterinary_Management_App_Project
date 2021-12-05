@@ -3,4 +3,5 @@ class Owner():
         self.name = name
         self.phone_number = phone_number
         self.registration = registration
+        self.my_pets = []
         self.id = id    # (PK)

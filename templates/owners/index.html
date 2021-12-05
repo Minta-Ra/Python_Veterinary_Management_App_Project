@@ -33,10 +33,13 @@
                 {% endif %}
                 <td></td>
                 
-                <!--  -->
-                <td>GET PETS - TODO</td>
+                <!-- Displaying list of pets for each owner -->
+                {% for pet in owner.my_pets %}
+                    <td>{{ pet.name }}</td>
+                {% endfor %}
             </tr>
         {% endfor %}
+        
     </table>
     <hr>
 </div>

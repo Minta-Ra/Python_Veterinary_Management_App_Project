@@ -2,27 +2,34 @@
 
 {% block content %}
 
-<h1>Edit owner details</h1>
+<h1 class="h1-name">Edit owner details</h1>
 
-<form action="/owners/{{ owner.id }}" method="post">
+<section class="show-add">
+    <section class="show-add-new">
 
-    <!-- Insert vet's details -->
-    <label for="name">Name:</label>
-    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write owner's full name" id="name" value="{{ owner.name }}">
+        <form action="/owners/{{ owner.id }}" method="post">
 
-    <label for="phone_number">Phone number:</label>
-    <input autocomplete="off" type="text" name="phone_number" id="phone_number" value="{{ owner.phone_number }}">
+            <!-- Insert vet's details -->
+            <label for="name">Name:</label>
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write owner's full name" id="name" value="{{ owner.name }}">
+            <br>
 
-    <label for="registration">Registration</label>
-    <input type="checkbox" id="registration" name="registration" value="{{ owner.registration }}">
+            <label for="phone_number">Phone number:</label>
+            <input autocomplete="off" type="text" name="phone_number" id="phone_number" value="{{ owner.phone_number }}">
+            <br>
+
+            <label for="registration">Registration</label>
+            <input type="checkbox" id="registration" name="registration" value="{{ owner.registration }}">
+            <br>
+
+            <!-- Display all owner's pets -->
 
 
-    <!-- Display all owner's pets -->
+            <!-- Submit button -->
+            <input type="submit" value="Confirm update details">
 
+        </form>
 
-    <!-- Submit button -->
-    <input type="submit" value="Confirm update details">
-
-</form>
-
+    </section>
+</section>
 {% endblock content %}

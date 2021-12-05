@@ -2,24 +2,31 @@
 
 {% block content %}
 
-<h1>Add new veterinarian</h1>
+<h1 class="h1-name">Add new veterinarian</h1>
 
-<form action="/veterinarians" method="post">
+<section class="show-add">
+    <section class="show-add-new">
 
-    <!-- Insert vet's details -->
-    <label for="name">Name:</label>
-    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name">
+        <form action="/veterinarians" method="post">
 
-    <label for="experience">Years of experience:</label>
-    <input autocomplete="off" type="number" name="experience" id="experience">
+            <!-- Insert vet's details -->
+            <label for="name">Name:</label>
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name">
+            <br>
+
+            <label for="experience">Years of experience:</label>
+            <input autocomplete="off" type="number" name="experience" id="experience">
+            <br>
+
+            <!-- Display all pets treated by specific vet -->
 
 
-    <!-- Display all pets treated by specific vet -->
+            <!-- Submit button -->
+            <input type="submit" value="Add new veterinarian">
 
+        </form>
 
-    <!-- Submit button -->
-    <input type="submit" value="Add new veterinarian">
-
-</form>
+    </section>
+</section>
 
 {% endblock content %}
