@@ -5,7 +5,6 @@
 <section class="show">
     <section class="show-edit">
         <h3>Owner's name: {{ owner.name }}</h3>
-        <hr>
         <h3>Phone number: {{ owner.phone_number }}</h3>
 
         {% if owner.registration == True %}
@@ -13,10 +12,6 @@
         {% else %}
             <h3>Registration status: ❌</h3>
         {% endif %}
-
-
-        <!--  -->
-        <!-- For loop to get owner's pets -->
 
         <form action="{{ owner.id }}/edit">
             <input type="submit" value="Update owner details">
