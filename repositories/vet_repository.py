@@ -36,13 +36,12 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-####################################
 def update(vet):
     sql = "UPDATE vets SET (name, experience) = (%s, %s) WHERE id = %s"
     values = [vet.name, vet.experience, vet.id]
     run_sql(sql, values)
 
-
+####################################
 # Show all pets treated by specific vet
 # Returns a vet who is treating specific owner's pets
 def vet_for_pet(owner):

@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div>
-    <h3>Name: {{ vet.name }}</h3>
-    <h3>Years of experience: {{ vet.experience }}</h3>
 
-    <form action="{{ vet.id }}/edit">
-        <input type="submit" value="Update veterinarian details">
-    </form>
+<section class="show">
+    <section class="show-edit">
+        <h3>Name: {{ vet.name }}</h3>
+        <hr>
+        <h3>Years of experience: {{ vet.experience }}</h3>
 
-    <form action="{{ vet.id }}/delete" method="post">
-        <input type="submit" value="Delete veterinarian">
-    </form>
-</div>
+        <form action="{{ vet.id }}/edit">
+            <input type="submit" value="Update veterinarian details">
+        </form>
+        <br>
+        <form action="{{ vet.id }}/delete" method="post">
+            <input type="submit" value="Delete veterinarian">
+        </form>
+    </section>
+</section>
 {% endblock content %}

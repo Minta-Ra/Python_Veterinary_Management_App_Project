@@ -2,24 +2,27 @@
 
 {% block content %}
 
-<div>
+<section class="show">
+    <section class="show-edit">
 
-    <h3>Pet's name: {{ pet.name }}</h3>
-    <h3>Date of birth: {{ pet.dob }}</h3>
-    <h3>Pet type: {{ pet.pet_type }}</h3>
-    <h3>Owner: {{ pet.owner.name }}</h3>
-    <h3>Assigned veterinarian: {{ pet.vet.name }}</h3>
-    <h3>Treatment notes: {{ pet.treatment_notes }}</h3>
+        <h3>Pet's name: {{ pet.name }}</h3>
+        <hr>
+        <h3>Date of birth: {{ pet.dob }}</h3>
+        <h3>Pet type: {{ pet.pet_type }}</h3>
+        <h3>Owner: {{ pet.owner.name }}</h3>
+        <h3>Assigned veterinarian: {{ pet.vet.name }}</h3>
+        <h3>Treatment notes: {{ pet.treatment_notes }}</h3>
 
-    <form action="{{ pet.id }}/edit">
-        <input type="submit" value="Update pet details">
-    </form>
-
-    <form action="{{ pet.id }}/delete" method="post">
-        <input type="submit" value="Delete pet">
-    </form>
-    
-</div>
+        <form action="{{ pet.id }}/edit">
+            <input type="submit" value="Update pet details">
+        </form>
+        <br>
+        <form action="{{ pet.id }}/delete" method="post">
+            <input type="submit" value="Delete pet">
+        </form>
+        
+    </section>
+</section>
 
 {% endblock content %}
 

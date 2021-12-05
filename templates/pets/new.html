@@ -2,45 +2,56 @@
 
 {% block content %}
 
-<h1>Add new pet</h1>
+<h1 class="h1-name">Add new pet</h1>
 
-<form action="/pets" method="post">
+<section class="show-add">
+    <section class="show-add-new">
 
-    <!-- Insert pet's details -->
-    <label for="name">Name:</label>
-    <input autocomplete="off" autofocus type="text" name="name" placeholder="Write pet's name" id="name">
+    <form action="/pets" method="post">
 
-    <label for="dob">Date of birth:</label>
-    <input autocomplete="off" type="date" name="dob" id="dob">
+        <!-- Insert pet's details -->
+        <label for="name">Name:</label>
+        <input autocomplete="off" autofocus type="text" name="name" placeholder="Write pet's name" id="name">
+        <br>
 
-    <label for="pet_type">Pet type:</label>
-    <input autocomplete="off" type="text" name="pet_type" placeholder="Write pet's type" id="pet_type">
+        <label for="dob">Date of birth:</label>
+        <input autocomplete="off" type="date" name="dob" id="dob">
+        <br>
 
-    <label for="owner">Select owner:</label>
-        <select name="owner_id" id="owner">
-            {% for owner in owners %}
-                <option value="{{ owner.id }}">{{ owner.name }}</option>
-            {% endfor %}
-        </select>
-        <!-- Add if pet's owner registered -->
-        <!-- ----------------------------- -->
-    
-    <label for="vet">Select veterinarian:</label>
-        <select name="vet_id" id="vet">
-            {% for vet in vets %}
-                <option value="{{ vet.id }}">{{ vet.name }}</option>
-            {% endfor %}
-        </select>
+        <label for="pet_type">Pet type:</label>
+        <input autocomplete="off" type="text" name="pet_type" placeholder="Write pet's type" id="pet_type">
+        <br>
 
-    <!-- Add notes -->
-    <label for="treatment_notes">Treatment Notes:</label>
-    <textarea name="treatment_notes" placeholder="Write notes" id="treatment_notes" cols="30" rows="2"></textarea>
+        <label for="owner">Select owner:</label>
+            <select name="owner_id" id="owner">
+                {% for owner in owners %}
+                    <option value="{{ owner.id }}">{{ owner.name }}</option>
+                {% endfor %}
+            </select>
+            <!-- Add if pet's owner registered -->
+            <!-- ----------------------------- -->
+        <br>
 
+        <label for="vet">Select veterinarian:</label>
+            <select name="vet_id" id="vet">
+                {% for vet in vets %}
+                    <option value="{{ vet.id }}">{{ vet.name }}</option>
+                {% endfor %}
+            </select>
+        <br>
 
-    <!-- Submit button -->
-    <input type="submit" value="Add new pet">
+        <!-- Add notes -->
+        <hr>
+        <label for="treatment_notes">Treatment Notes:</label>
+        <br>
+        <textarea name="treatment_notes" placeholder="Write notes" id="treatment_notes" cols="30" rows="2"></textarea>
+        <br>
 
-</form>
+        <!-- Submit button -->
+        <input type="submit" value="Add new pet">
 
-    
+    </form>
+
+    </section>
+</section>
 {% endblock content %}

@@ -29,7 +29,12 @@ def new_owner():
 def add_new_owner():
     name = request.form["name"]
     phone_number = request.form["phone_number"]
-    registration = request.form["registration"]
+
+    if "registration" in request.form.keys():
+        registration = True
+    else:
+        registration = False
+
     owner = Owner(name, phone_number, registration)
     owner_repository.save(owner)
     return redirect("/owners")
@@ -43,9 +48,30 @@ def show(id):
 
 # EDIT
 # GET '/owners/<id>/edit'
+@owners_blueprint.route("/owners/<id>/edit")
+def edit_owner(id):
+    owner = owner_repository.select(id)
+    return render_template("owners/edit.html", owner=owner)
 
 # UPDATE
 # PUT '/owners/<id>'
+@owners_blueprint.route("/owners/<id>", methods=["POST"])
+def update_owner_details(id):
+    name = request.form["name"]
+    phone_number = request.form["phone_number"]
+
+    if "registration" in request.form.keys():
+        registration = True
+    else:
+        registration = False
+        
+    owner = Owner(name, phone_number, registration, id)
+    owner_repository.update(owner)
+    return redirect("/owners")
 
 # DELETE
 # DELETE '/owners/<id>'
+@owners_blueprint.route("/owners/<id>/delete", methods=["POST"])
+def delete_owner(id):
+    owner_repository.delete(id)
+    return redirect("/owners")
