@@ -6,7 +6,7 @@ import repositories.pet_repository as pet_repository
 
 
 def save(appointment):
-    sql = "INSERT INTO appointments (pet, appointment_date, check_in, check_out, vet) VALUES (%s, %s, %s, %s, %s) RETURNING id"
+    sql = "INSERT INTO appointments (pet_id, appointment_date, check_in, check_out, vet_id) VALUES (%s, %s, %s, %s, %s) RETURNING id"
     values = [appointment.pet.id, appointment.appointment_date, appointment.check_in, appointment.check_out, appointment.vet.id]
     results = run_sql(sql, values)
     appointment.id = results[0]['id']
@@ -48,6 +48,6 @@ def delete(id):
 
 # Update
 def update(appointment):
-    sql = "UPDATE appointments SET (pet, appointment_date, check_in, check_out, vet) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE appointments SET (pet_id, appointment_date, check_in, check_out, vet_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [appointment.pet.id, appointment.appointment_date, appointment.check_in, appointment.check_out, appointment.vet.id, appointment.id]
     run_sql(sql, values)

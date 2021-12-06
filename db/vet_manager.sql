@@ -35,6 +35,6 @@ CREATE TABLE appointments (
     appointment_date DATE,
     check_in TIME,
     check_out TIME,
-    pet_id REFERENCES pets(id),
-    vet_id REFERENCES vets(id)
+    pet_id INT REFERENCES pets(id),
+    vet_id INT REFERENCES vets(id)
 );

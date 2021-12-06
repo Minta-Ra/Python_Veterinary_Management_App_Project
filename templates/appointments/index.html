@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content-page">
+    <h1>All appointments</h1>
+    <hr>
+    <h3>
+        <a class="links" href="/appointments/new">Add new appointment</a>
+    </h3>
+
+    <table class="table">
+        <tr>
+            <th>Pet's name:</th>
+            <th></th>
+            <th>Appointment date:</th>
+            <th></th>
+            <th>Check-in time:</th>
+            <th></th>
+            <th>Check-out time:</th>
+            <th></th>
+            <th>Assigned veterinarian:</th>
+        </tr>
+        <hr>
+        {% for pet in pets %}
+            <tr>
+                <td><a class="table-links" href="/pets/{{ pet.id }}"> {{ appointment.pet.name }} </a></td>
+                <td></td>
+                <td>{{ appointment.appointment_date }}</td>
+                <td></td>
+                <td>{{ appointment.check_in }}</td>
+                <td></td>
+                <td>{{ appointment.check_out }}</td>
+                <td></td>
+                <td>{{ appointment.vet.name }}</td>
+                <td></td>
+                <td>{{ pet.treatment_notes }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <hr>
+    
+</div>
+
+{% endblock content %}
