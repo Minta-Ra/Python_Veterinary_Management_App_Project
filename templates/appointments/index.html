@@ -22,9 +22,9 @@
             <th>Assigned veterinarian:</th>
         </tr>
         <hr>
-        {% for pet in pets %}
+        {% for appointment in appointments %}
             <tr>
-                <td><a class="table-links" href="/pets/{{ pet.id }}"> {{ appointment.pet.name }} </a></td>
+                <td><a class="table-links" href="/appointments/{{ appointment.id }}"> {{ appointment.pet.name }} </a></td>
                 <td></td>
                 <td>{{ appointment.appointment_date }}</td>
                 <td></td>
@@ -34,7 +34,7 @@
                 <td></td>
                 <td>{{ appointment.vet.name }}</td>
                 <td></td>
-                <td>{{ pet.treatment_notes }}</td>
+                <td>{{ appointment.pet.treatment_notes }}</td>
             </tr>
         {% endfor %}
     </table>

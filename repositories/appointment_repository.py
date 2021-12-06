@@ -28,6 +28,8 @@ def select_all():
 def select(id):
     appointment = None
     sql = "SELECT * FROM appointments WHERE id = %s"
+    # Get pet and owner
+    # sql = "SELECT pets.*, owners.* FROM pets INNER JOIN owners ON owners.id = pets.owner_id WHERE pets.id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
     pet = pet_repository.select(result['pet_id'])
