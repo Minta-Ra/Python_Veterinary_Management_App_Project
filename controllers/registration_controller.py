@@ -6,5 +6,5 @@ registrations_blueprint = Blueprint("registration", __name__)
 
 
 @registrations_blueprint.route("/registration")
-def register():
-    return render_template("/registration.html")
+def register_owner():
+    return render_template("/owners/new.html", registration=True)

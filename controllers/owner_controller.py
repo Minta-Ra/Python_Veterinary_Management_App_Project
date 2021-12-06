@@ -41,7 +41,11 @@ def add_new_owner():
 
     owner = Owner(name, phone_number, registration)
     owner_repository.save(owner)
-    return redirect("/owners")
+
+    if "register" in request.form.keys():
+        return redirect("/pets/new")
+    else:
+        return redirect("/owners")
 
 # SHOW
 # GET '/owners/<id>'

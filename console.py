@@ -79,8 +79,6 @@ pet_10 = Pet("Teddy", "01-10-2021", "Dog", owner_7, vet_3, "Prescribe puppy worm
 pet_repository.save(pet_10)
 
 
-
-
 ############################################
 all_vets = vet_repository.select_all()
 all_owners = owner_repository.select_all()

@@ -22,6 +22,11 @@
             <input type="checkbox" id="registration" name="registration">
             <br>
 
+            {% if registration == True %}
+                <!-- Hidden -->
+                <input type="hidden" name="register" value="True">
+            {% endif %}
+
             <!-- Submit button -->
             <input type="submit" value="Add new owner">
 
