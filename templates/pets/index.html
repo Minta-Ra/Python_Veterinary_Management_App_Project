@@ -28,7 +28,7 @@
             <tr>
                 <td><a class="table-links" href="/pets/{{ pet.id }}"> {{ pet.name }} </a></td>
                 <td></td>
-                <td>{{ pet.dob }}</td>
+                <td>{{ pet.dob.strftime("%d-%m-%Y") }}</td>
                 <td></td>
                 <td>{{ pet.pet_type }}</td>
                 <td></td>

@@ -28,11 +28,11 @@
             <tr>
                 <td><a class="table-links" href="/appointments/{{ appointment.id }}"> {{ appointment.pet.name }} </a></td>
                 <td></td>
-                <td>{{ appointment.appointment_date }}</td>
+                <td>{{ appointment.appointment_date.strftime("%d-%m-%Y") }}</td>
                 <td></td>
-                <td>{{ appointment.check_in }}</td>
+                <td>{{ appointment.check_in.strftime("%R") }}</td>
                 <td></td>
-                <td>{{ appointment.check_out }}</td>
+                <td>{{ appointment.check_out.strftime("%R") }}</td>
                 <td></td>
                 <td>{{ appointment.vet.name }}</td>
                 <td></td>

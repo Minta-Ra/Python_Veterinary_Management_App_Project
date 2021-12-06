@@ -73,7 +73,7 @@ def update_appointment_details(id):
 
 # DELETE
 # DELETE '/appointments/<id>'
-@appointments_blueprint.route("/appointments/<id>", methods=["POST"])
+@appointments_blueprint.route("/appointments/<id>/delete", methods=["POST"])
 def delete_appointment(id):
     appointment_repository.delete(id)
     return redirect("/appointments")
