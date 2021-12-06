@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="h1-name">Edit appointment</h1>
+
+<section class="show-add">
+    <section class="show-add-new">
+
+        <form action="/appointments/{{ appointment.id }}" method="post">
+
+            <label for="pet">Select pet:</label>
+                <select name="pet_id" id="pet">
+                    {% for pet in pets %}
+                        <option value="{{ pet.id }}">{{ pet.name }}</option>
+                    {% endfor %}
+                </select>
+            <br>
+
+            <label for="appointment_date">Appointment date:</label>
+            <input autocomplete="off" type="date" name="appointment_date" id="appointment_date" value="{{ appointment.appointment_date }}">
+            <br>
+
+            <label for="check_in">Check-in time:</label>
+            <input autocomplete="off" type="time" name="check_in" id="check_in" value="{{ appointment.check_in }}">
+            <br>
+
+            <label for="check_out">Check-out time:</label>
+            <input autocomplete="off" type="time" name="check_out" id="check_out" value="{{ appointment.check_out }}">
+            <br>
+
+            <label for="vet">Select veterinarian:</label>
+                <select name="vet_id" id="vet">
+                    {% for vet in vets %}
+                        <option value="{{ vet.id }}">{{ vet.name }}</option>
+                    {% endfor %}
+                </select>
+            <br>
+
+            <input type="submit" value="Confirm update appointment">
+
+        </form>
+
+    </section>
+</section>
+    
+{% endblock content %}

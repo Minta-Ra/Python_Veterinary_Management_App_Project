@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<section class="show">
+    <section class="show-edit">
+        <h3>Pet's name: {{ appointment.pet.name }}</h3>
+        <h3>Appointment date: {{ appointment.appointment_date }}</h3>
+        <h3>Check-in time: {{ appointment.check_in }}</h3>
+        <h3>Check-out time: {{ appointment.check_out }}</h3>
+        <h3>Assigned veterinarian: {{ appointment.vet.name }}</h3>
+
+        <form action="{{ appointment.id }}/edit">
+            <input type="submit" value="Update appointment">
+        </form>
+        <br>
+        <form action="{{ appointment.id }}/delete" method="post">
+            <input type="submit" value="Delete appointment">
+        </form>
+
+    </section>
+</section>
+
+
+{% endblock content %}

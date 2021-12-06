@@ -42,7 +42,7 @@ def add_new_appointment():
 
 # SHOW
 # GET '/appointments/<id>'
-@appointments_blueprint.route("/appointments_blueprint/<id>")
+@appointments_blueprint.route("/appointments/<id>")
 def show_appointments(id):
     appointment = appointment_repository.select(id)
     return render_template("appointments/show.html", appointment=appointment)
