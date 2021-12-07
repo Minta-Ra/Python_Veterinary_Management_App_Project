@@ -7,22 +7,18 @@ import repositories.vet_repository as vet_repository
 vets_blueprint = Blueprint("veterinarians", __name__)
 
 # RESTful CRUD Routes
-
-# INDEX
-# GET '/vets'
+# INDEX # GET '/vets'
 @vets_blueprint.route("/veterinarians")
 def vets():
     vets = vet_repository.select_all()
     return render_template("vets/index.html", vets=vets)
 
-# NEW
-# GET '/vets/new'
+# NEW # GET '/vets/new'
 @vets_blueprint.route("/veterinarians/new", methods=["GET"])
 def new_vet():
     return render_template("vets/new.html")
 
-# CREATE
-# POST '/vets'
+# CREATE # POST '/vets'
 @vets_blueprint.route("/veterinarians", methods=["POST"])
 def add_new_vet():
     name = request.form["name"]
@@ -31,22 +27,19 @@ def add_new_vet():
     vet_repository.save(vet)
     return redirect("/veterinarians")
 
-# SHOW
-# GET '/vets/<id>'
+# SHOW # GET '/vets/<id>'
 @vets_blueprint.route("/veterinarians/<id>")
 def show(id):
     vet = vet_repository.select(id)
     return render_template("vets/show.html", vet=vet)
 
-# EDIT
-# GET '/vets/<id>/edit'
+# EDIT # GET '/vets/<id>/edit'
 @vets_blueprint.route("/veterinarians/<id>/edit")
 def edit_vet(id):
     vet = vet_repository.select(id)
     return render_template("vets/edit.html", vet=vet)
 
-# UPDATE
-# PUT '/vets/<id>'
+# UPDATE # PUT '/vets/<id>'
 @vets_blueprint.route("/veterinarians/<id>", methods=["POST"])
 def update_vet_details(id):
     name = request.form["name"]
@@ -55,8 +48,7 @@ def update_vet_details(id):
     vet_repository.update(vet)
     return redirect("/veterinarians")
 
-# DELETE
-# DELETE '/vets/<id>'
+# DELETE # DELETE '/vets/<id>'
 @vets_blueprint.route("/veterinarians/<id>/delete", methods=["POST"])
 def delete_vet(id):
     vet_repository.delete(id)

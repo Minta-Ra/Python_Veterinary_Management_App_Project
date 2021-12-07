@@ -4,4 +4,4 @@ class Owner():
         self.phone_number = phone_number
         self.registration = registration
         self.my_pets = []
-        self.id = id    # (PK)
+        self.id = id            # (PK)

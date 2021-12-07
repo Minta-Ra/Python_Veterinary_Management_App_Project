@@ -18,18 +18,16 @@ CREATE TABLE owners (
     registration BOOLEAN
 );
 
--- JOIN TABLE
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     dob DATE,
     pet_type VARCHAR(255),
     owner_id INT REFERENCES owners(id) ON DELETE CASCADE,
-    vet_id INT REFERENCES vets(id) ON DELETE SET NULL,      -- Error handling needs to be implemented
+    vet_id INT REFERENCES vets(id) ON DELETE SET NULL,
     treatment_notes TEXT
 );
 
--- JOIN TABLE
 CREATE TABLE appointments (
     id SERIAL PRIMARY KEY,
     appointment_date DATE,

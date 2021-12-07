@@ -31,9 +31,7 @@
     margin: 0px;
 }
 
-
 /* -BODY----------------------------------------------------- */
-
 
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -44,7 +42,6 @@ body {
 }
 
 #home {
-    /* text-shadow: 3px 2px 2px #0c0c0c; */
     padding: 20px;
     text-align: center;
     color: rgb(0, 4, 53);
@@ -55,8 +52,8 @@ body {
     padding: 20px;
 }
 
-
 /* -PAGES--------------------------------------------------- */
+
 .content-page {
     line-height: 1.6;
     color: white;
@@ -96,6 +93,7 @@ body {
     border-radius: 10px;
     border: solid 2px #0f0f0f;
 }
+
 /* --------------------------------------------------------- */
 
 .h1-name {
@@ -119,8 +117,6 @@ body {
     border-radius: 10px;
     border: solid 2px #0f0f0f;
 }
-
-
 
 td {
     padding: 0px 25px 0px 0px;

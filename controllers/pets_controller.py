@@ -9,24 +9,20 @@ import repositories.pet_repository as pet_repository
 pets_blueprint = Blueprint("pets", __name__)
 
 # RESTful CRUD Routes
-
-# INDEX
-# GET '/pets'
+# INDEX # GET '/pets'
 @pets_blueprint.route("/pets")
 def pets():
     pets = pet_repository.select_all()
     return render_template("pets/index.html", pets=pets)
 
-# NEW
-# GET '/pets/new'
+# NEW # GET '/pets/new'
 @pets_blueprint.route("/pets/new", methods=["GET"])
 def new_pet():
     owners = owner_repository.select_all()
     vets = vet_repository.select_all()
     return render_template("pets/new.html", owners=owners, vets=vets)
 
-# CREATE - ADD
-# POST '/pets'
+# CREATE - ADD # POST '/pets'
 @pets_blueprint.route("/pets", methods=["POST"])
 def add_new_pet():
     name = request.form["name"]
@@ -41,15 +37,13 @@ def add_new_pet():
     pet_repository.save(pet)
     return redirect("/pets")
 
-# SHOW
-# GET '/pets/<id>'
+# SHOW # GET '/pets/<id>'
 @pets_blueprint.route("/pets/<id>")
 def show_pets(id):
     pet = pet_repository.select(id)
     return render_template("pets/show.html", pet=pet)
 
-# EDIT
-# GET '/pets/<id>/edit'
+# EDIT # GET '/pets/<id>/edit'
 @pets_blueprint.route("/pets/<id>/edit")
 def edit_pet(id):
     pet = pet_repository.select(id)
@@ -57,8 +51,7 @@ def edit_pet(id):
     vets = vet_repository.select_all()
     return render_template("pets/edit.html", pet=pet, owners=owners, vets=vets)
 
-# UPDATE
-# PUT '/pets/<id>'
+# UPDATE # PUT '/pets/<id>'
 @pets_blueprint.route("/pets/<id>", methods=["POST"])
 def update_pet_details(id):
     name = request.form["name"]
@@ -73,9 +66,7 @@ def update_pet_details(id):
     pet_repository.update(pet)
     return redirect("/pets")
 
-
-# DELETE
-# DELETE '/pets/<id>'
+# DELETE # DELETE '/pets/<id>'
 @pets_blueprint.route("/pets/<id>/delete", methods=["POST"])
 def delete_pet(id):
     pet_repository.delete(id)

@@ -25,8 +25,6 @@ def select_all():
 def select(id):
     pet = None
     sql = "SELECT * FROM pets WHERE id = %s"
-    # Get pet and owner
-    # sql = "SELECT pets.*, owners.* FROM pets INNER JOIN owners ON owners.id = pets.owner_id WHERE pets.id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
     owner = owner_repository.select(result['owner_id'])
