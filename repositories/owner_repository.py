@@ -60,6 +60,8 @@ def bring_owner_pets(id):
 # Returns all owner's pets treated by specific vet
 def owner_for_pet(owner):
     owner_for_pets = []
+    # Get pet and owner
+    # sql = "SELECT pets.*, owners.* FROM pets INNER JOIN owners ON owners.id = pets.owner_id WHERE pets.id = %s"
     sql = "SELECT owners.* FROM owners INNER JOIN pets ON pets.owner_id = owners.id WHERE vet_id = %s"
     values = [owner.id]
     results = run_sql(sql, values)

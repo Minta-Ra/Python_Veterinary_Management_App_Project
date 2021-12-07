@@ -33,6 +33,6 @@ CREATE TABLE appointments (
     appointment_date DATE,
     check_in TIME,
     check_out TIME,
-    pet_id INT REFERENCES pets(id),
+    pet_id INT REFERENCES pets(id) ON DELETE CASCADE,
     vet_id INT REFERENCES vets(id)
 );
