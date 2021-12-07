@@ -1,4 +1,3 @@
-from controllers.pet_controller import pets
 from db.run_sql import run_sql
 from models.appointment import Appointment
 import repositories.vet_repository as vet_repository

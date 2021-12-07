@@ -12,7 +12,11 @@
             <label for="pet">Select pet:</label>
                 <select name="pet_id" id="pet">
                     {% for pet in pets %}
-                        <option value="{{ pet.id }}">{{ pet.name }}</option>
+                        <option value="{{ pet.id }}" 
+                        {% if pet.id == appointment.pet.id %}
+                            selected="selected"
+                        {% endif %}>
+                    {{ pet.name }}</option>
                     {% endfor %}
                 </select>
             <br>
@@ -32,7 +36,11 @@
             <label for="vet">Select veterinarian:</label>
                 <select name="vet_id" id="vet">
                     {% for vet in vets %}
-                        <option value="{{ vet.id }}">{{ vet.name }}</option>
+                        <option value="{{ vet.id }}" 
+                        {% if vet.id == appointment.vet.id %}
+                            selected="selected"
+                        {% endif %}>
+                            {{ vet.name }}</option>
                     {% endfor %}
                 </select>
             <br>

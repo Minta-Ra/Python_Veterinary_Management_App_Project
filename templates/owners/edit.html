@@ -19,7 +19,10 @@
             <br>
 
             <label for="registration">Register</label>
-            <input type="checkbox" id="registration" name="registration" value="{{ owner.registration }}">
+            <input type="checkbox" id="registration" name="registration" value="{{ owner.registration }}" 
+            {% if owner.registration == True %}
+                checked
+            {% endif %}>
             <br>
 
             <!-- Submit button -->

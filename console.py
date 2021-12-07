@@ -1,5 +1,4 @@
 import pdb
-from controllers.appointment_controller import appointments
 from models.appointment import Appointment
 from models.vet import Vet
 from models.owner import Owner

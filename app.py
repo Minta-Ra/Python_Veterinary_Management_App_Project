@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 
-from controllers.vet_controller import vets_blueprint
-from controllers.owner_controller import owners_blueprint
-from controllers.pet_controller import pets_blueprint
-from controllers.registration_controller import registrations_blueprint
-from controllers.appointment_controller import appointments_blueprint
+from controllers.vets_controller import vets_blueprint
+from controllers.owners_controller import owners_blueprint
+from controllers.pets_controller import pets_blueprint
+from controllers.registrations_controller import registrations_blueprint
+from controllers.appointments_controller import appointments_blueprint
 
 app = Flask(__name__)
 

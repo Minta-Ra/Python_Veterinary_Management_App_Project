@@ -25,17 +25,23 @@
             <label for="owner">Select owner:</label>
                 <select name="owner_id" id="owner">
                     {% for owner in owners %}
-                        <option value="{{ owner.id }}">{{ owner.name }}</option>
+                        <option value="{{ owner.id }}" 
+                        {% if owner.id == pet.owner.id %}
+                            selected="selected"
+                        {% endif %}>
+                            {{ owner.name }}</option>
                     {% endfor %}
                 </select>
-                <!-- Add if pet's owner registered -->
-                <!-- ----------------------------- -->
             <br>
                 
             <label for="vet">Select veterinarian:</label>
                 <select name="vet_id" id="vet">
                     {% for vet in vets %}
-                        <option value="{{ vet.id }}">{{ vet.name }}</option>
+                        <option value="{{ vet.id }}" 
+                        {% if vet.id == pet.vet.id %}
+                            selected="selected"
+                        {% endif %}>
+                            {{ vet.name }}</option>
                     {% endfor %}
                 </select>
             <br>
