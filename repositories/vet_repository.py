@@ -42,8 +42,7 @@ def update(vet):
     run_sql(sql, values)
 
 ####################################
-# Show all pets treated by specific vet
-# Returns a vet who is treating specific owner's pets
+# Returns a vet/vets who is treating specific owner's pets
 def vet_for_pet(owner):
     vet_for_pets = []
     sql = "SELECT vets.* FROM vets INNER JOIN pets ON pets.vet_id = vets.id WHERE owner_id = %s"

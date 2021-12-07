@@ -57,7 +57,7 @@ def bring_owner_pets(id):
     return pets
 
 ####################################
-# Returns all owner's pets treated by specific vet
+# Returns owners whose pets being treated by specific vet
 def owner_for_pet(owner):
     owner_for_pets = []
     # Get pet and owner
