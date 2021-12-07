@@ -11,15 +11,15 @@
 
             <!-- Insert pet's details -->
             <label for="name">Name:</label>
-            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write pet's name" id="name" value="{{ pet.name }}">
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write pet's name" id="name" required value="{{ pet.name }}">
             <br>
 
             <label for="dob">Date of birth:</label>
-            <input autocomplete="off" type="date" name="dob" id="dob" value="{{ pet.dob }}">
+            <input autocomplete="off" type="date" name="dob" id="dob" required value="{{ pet.dob }}">
             <br>
             
             <label for="pet_type">Pet type:</label>
-            <input autocomplete="off" type="text" name="pet_type" placeholder="Write pet's type" id="pet_type" value="{{ pet.pet_type }}">
+            <input autocomplete="off" type="text" name="pet_type" placeholder="Write pet's type" id="pet_type" required value="{{ pet.pet_type }}">
             <br>
             
             <label for="owner">Select owner:</label>
@@ -45,7 +45,7 @@
             <label for="treatment_notes">Treatment Notes:</label>
             <br>
             
-            <textarea name="treatment_notes" id="treatment_notes" cols="30" rows="2">{{ pet.treatment_notes }}</textarea>
+            <textarea name="treatment_notes" id="treatment_notes" cols="30" rows="2" required>{{ pet.treatment_notes }}</textarea>
             <br>
 
             <!-- Submit button -->

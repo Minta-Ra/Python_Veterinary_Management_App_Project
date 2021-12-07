@@ -38,16 +38,16 @@ owner_repository.save(owner_1)
 owner_2 = Owner("Olivia Davis", "+44 7366 864434", False)
 owner_repository.save(owner_2)
 
-owner_3 = Owner("Samantha Thompson", "+44 7346 872625", False)
+owner_3 = Owner("Samantha Thompson", "+44 7346 872625", True)
 owner_repository.save(owner_3)
 
 owner_4 = Owner("Liam Taylor", "+44 7755 766534", False)
 owner_repository.save(owner_4)
 
-owner_5 = Owner("Kyle Harris", "+44 7334 886423", True)
+owner_5 = Owner("Kyle Harris", "+44 7334 886423", False)
 owner_repository.save(owner_5)
 
-owner_6 = Owner("Augustine Evans", "+44 7487 755429", False)
+owner_6 = Owner("Augustine Evans", "+44 7487 755429", True)
 owner_repository.save(owner_6)
 
 owner_7 = Owner("Johnathan Roberts", "+44 7457 886535", True)
@@ -92,6 +92,12 @@ appointment_repository.save(appointment_2)
 
 appointment_3 = Appointment(pet_5, "2021-12-18", "16:15", "16:35", vet_4)
 appointment_repository.save(appointment_3)
+
+appointment_4 = Appointment(pet_6, "2022-01-04", "09:00", "09:30", vet_1)
+appointment_repository.save(appointment_4)
+
+appointment_5 = Appointment(pet_9, "2022-01-06", "11:45", "12:00", vet_2)
+appointment_repository.save(appointment_5)
 
 
 ############################################

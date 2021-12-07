@@ -11,11 +11,11 @@
 
             <!-- Insert vet's details -->
             <label for="name">Name:</label>
-            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name" value="{{ vet.name }}">
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write veterinarian's name" id="name" required value="{{ vet.name }}">
             <br>
 
             <label for="experience">Years of experience:</label>
-            <input autocomplete="off" type="number" name="experience" id="experience" value="{{ vet.experience }}">
+            <input autocomplete="off" type="number" min="0" name="experience" id="experience" required value="{{ vet.experience }}">
             <br>
 
             <!-- Display all pets treated by specific vet -->

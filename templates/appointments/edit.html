@@ -18,15 +18,15 @@
             <br>
 
             <label for="appointment_date">Appointment date:</label>
-            <input autocomplete="off" type="date" name="appointment_date" id="appointment_date" value="{{ appointment.appointment_date }}">
+            <input autocomplete="off" type="date" name="appointment_date" id="appointment_date" required value="{{ appointment.appointment_date }}">
             <br>
 
             <label for="check_in">Check-in time:</label>
-            <input autocomplete="off" type="time" name="check_in" id="check_in" value="{{ appointment.check_in }}">
+            <input autocomplete="off" type="time" name="check_in" id="check_in" required value="{{ appointment.check_in }}">
             <br>
 
             <label for="check_out">Check-out time:</label>
-            <input autocomplete="off" type="time" name="check_out" id="check_out" value="{{ appointment.check_out }}">
+            <input autocomplete="off" type="time" name="check_out" id="check_out" required value="{{ appointment.check_out }}">
             <br>
 
             <label for="vet">Select veterinarian:</label>

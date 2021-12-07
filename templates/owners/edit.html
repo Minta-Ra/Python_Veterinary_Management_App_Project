@@ -11,11 +11,11 @@
 
             <!-- Insert vet's details -->
             <label for="name">Name:</label>
-            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write owner's full name" id="name" value="{{ owner.name }}">
+            <input autocomplete="off" autofocus type="text" name="name" placeholder="Write owner's full name" id="name" required value="{{ owner.name }}">
             <br>
 
             <label for="phone_number">Phone number:</label>
-            <input autocomplete="off" type="text" name="phone_number" id="phone_number" value="{{ owner.phone_number }}">
+            <input autocomplete="off" type="text" name="phone_number" id="phone_number" required value="{{ owner.phone_number }}">
             <br>
 
             <label for="registration">Register</label>
