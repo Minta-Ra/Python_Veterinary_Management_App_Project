@@ -6,8 +6,9 @@ CRUD actions are implemented for pets, owners, veterinarians, and appointments.
 
 ### <a href="https://github.com/codeclan/g28_classnotes/blob/main/python_projects/project_briefs/Vet_Management.md">
 Full project brief</a>
+#
 
-| This project was created using: |
+| **This project was created using:** |
 | :------------------------------ |
 | Python |
 | SQL |
