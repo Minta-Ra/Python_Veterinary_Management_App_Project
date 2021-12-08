@@ -8,7 +8,7 @@ CRUD actions are implemented for pets, owners, veterinarians, and appointments.
 Full project brief</a>
 #
 
-| **This project was created using:** |
+| __This project was created using:__ |
 | :------------------------------ |
 | Python |
 | SQL |
