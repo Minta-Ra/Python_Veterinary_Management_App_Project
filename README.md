@@ -8,6 +8,31 @@ CRUD actions are implemented for pets, owners, veterinarians, and appointments.
 Full project brief</a>
 #
 
+## To use this program run in terminal the fellowing:
+
+```python
+
+# Drop this database in case it is existing
+dropdb vet_manager
+
+# Create this database
+createdb vet_manager
+
+# Run PostgreSQL
+psql -d vet_manager -f db/vet_manager.sql
+
+# Populate with data
+python3 console.py 
+```
+
+
+## To query the database:
+
+```python
+psql -d vet_manager
+```
+
+
 | **This project was created using:** |
 | :------------------------------ |
 | Python |
