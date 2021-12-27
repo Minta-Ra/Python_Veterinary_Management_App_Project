@@ -34,9 +34,9 @@ psql -d vet_manager
 ```
 
 
-## This project was created using:
+| This project was created using: |
+| :------------------------------ |
 | Python |
-| :----- |
 | SQL |
 | PosgreSQL |
 | psycopg2 |
