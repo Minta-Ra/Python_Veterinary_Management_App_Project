@@ -50,7 +50,7 @@ psql -d vet_manager
 
 #
 ### Home page:
-![](app-screenshots/1.png)
+![](app-screenshots/12.png)
 
 #
 ### Display all pets currently in the clinic:
